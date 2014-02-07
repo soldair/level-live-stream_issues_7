@@ -26,7 +26,9 @@ db.livestream().on('data',function(change){
 
 ```
 
-when using multilevel that has a dep tree rooted in stream serializer. when trying to serialize the sublevel object we blow the stack.
+using multilevel.  when trying to serialize the sublevel object to send to a client we blow the stack.
+
+it is not the expected behavior for the prefix key to bubble out of level-hooks
 
 
 
